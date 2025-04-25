@@ -1,0 +1,152 @@
+import{useState} from 'react';
+import { StatusBar } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Button, Modal } from 'react-native';
+const logoImg = require("./assets/adaptive-icon.png");
+
+export default function App() {
+  const [isStatusBarVisible, setStatusBarVisible] = useState(false);
+ return( <View style = {styles.container}> 
+   
+    <StatusBar backgroundColor= "lightgreen" barStyle ="dark-content" hidden = {isStatusBarVisible}  />
+      <View style = {styles.secondContainer}> <Text> This is container inside container </Text></View>
+    <Text 
+    style = {
+     styles.text
+    }> Hello to A!</Text>
+      
+      <Button  title = "Status Bar" onPress={ ()=> setStatusBarVisible(!isStatusBarVisible) }  />
+   </View>
+      
+   
+  );
+}
+
+const styles = StyleSheet.create ({
+  container: { flex: 1, backgroundColor: "darkcyan", padding: 50},
+  secondContainer: {height: 100, width: 100, backgroundColor: "red"},
+  text: { padding: 20 , fontSize: 20}
+
+
+}
+
+)
+
+
+
+/*
+ STRUCTURE OF LOGIN AND REGISTER
+
+import { Text, View, Image, ImageBackground, ScrollView, Button, Modal , TextInput, StyleSheet} from 'react-native';
+
+
+export default function App() {
+
+ return(
+  
+ 
+  
+  <View style = {styles.container}> 
+      <Text>Welcome</Text>
+      <Text>Please proceed by logging in</Text>
+      <TextInput placeholder = 'Username or Password'></TextInput>
+      <TextInput placeholder = 'Pad'></TextInput>
+       <Button title = 'Cmon work?' />
+        <Button title = 'Login' />
+          <Text>Dont hav account ?</Text>
+          <Button title = 'Sign up'/> 
+         
+         </View>
+         
+   
+  );
+}
+
+const styles = StyleSheet.create ({
+  container: { flex: 1, backgroundColor: "maroon"},
+
+  text: { padding: 20 , fontSize: 20, justifyContent: "center"}
+
+
+}
+
+)
+*/
+
+/*
+import { Button, Text, View, StyleSheet, Pressable} from 'react-native';
+
+type PrimaryButtonType = 
+{
+    title: string,
+    onPress: ()=> void
+}
+
+export default function PrimaryButton({title, onPress} : PrimaryButtonType){
+return(
+    <Pressable onPress={onPress}>
+    <View style = {styles.container}>
+      
+      <Text>{title}</Text>
+      
+    </View>
+    </Pressable>
+)
+
+}
+const styles = StyleSheet.create({
+     
+    container: { backgroundColor: "#2E2E2E",
+     //   paddingVertical: 30,
+       // paddingHorizontal: 24,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        marginVertical: 30,
+    flex:1}
+
+
+})
+
+/*
+Main app za poziv ovoga: 
+
+
+import { Text, View, Image, ImageBackground, ScrollView, Button, Modal , TextInput, StyleSheet} from 'react-native';
+import PrimaryButton from './components/PrimaryButton' 
+
+export default function App() {
+
+ return(
+  
+ 
+  
+  <View style = {styles.container}> 
+      <PrimaryButton
+      title = "login" 
+        onPress ={ () => {console.log("HEEY");} } 
+      
+      />
+         
+         </View>
+         
+   
+  );
+}
+
+const styles = StyleSheet.create ({
+  container: {     flex: 1,
+    backgroundColor: 'maroon',
+    justifyContent: 'center',  // ⬇️ center vertically
+    alignItems: 'center', },
+
+  text: { padding: 20 , fontSize: 20, }
+
+
+}
+
+)
+
+
+
+*/ 
+*/

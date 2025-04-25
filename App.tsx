@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './screens/LoginScreen';
+import AboutScreen from './screens/AboutScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import type { RootStackParamList } from '../miraculous-crime/types'; 
+import { useFonts } from 'expo-font'; 
+
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    StardosRegular: require('./assets/fonts/StardosStencil-Regular.ttf'),
+    StardosBold: require('./assets/fonts/StardosStencil-Bold.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null; // or a splash/loading screen
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer >
+      
+      <Stack.Navigator initialRouteName = "LoginScreen">
+
+          <Stack.Screen name = "LoginScreen" component={LoginScreen}/>
+          <Stack.Screen name = "RegisterScreen" component = {RegisterScreen} />
+          <Stack.Screen name = "AboutScreen" component={AboutScreen}/>
+
+      </Stack.Navigator>
+      
+      
+      </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
