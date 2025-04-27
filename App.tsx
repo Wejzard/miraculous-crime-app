@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import AboutScreen from './screens/AboutScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import type { RootStackParamList } from '../miraculous-crime/types'; 
 import { useFonts } from 'expo-font'; 
 
@@ -29,6 +30,7 @@ export default function App() {
           <Stack.Screen name = "LoginScreen" component={LoginScreen}/>
           <Stack.Screen name = "RegisterScreen" component = {RegisterScreen} />
           <Stack.Screen name = "AboutScreen" component={AboutScreen}/>
+          <Stack.Screen name = "ProfileScreen" component={ProfileScreen}/>
 
       </Stack.Navigator>
       

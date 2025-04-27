@@ -4,6 +4,8 @@ import type { RootStackParamList } from '../types';
 import PrimaryButton from '../components/PrimaryButton';
 import InputFields from '../components/InputFields';
 import { useState } from 'react';
+
+
 type Props = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
 
 
@@ -37,7 +39,7 @@ export default function LoginScreen({navigation} : Props){
               <Text style = {styles.textual}>Show Password</Text>
              
          
-          <PrimaryButton  style = {styles.button} title = "Login" onPress= { () => console.log("") } />
+          <PrimaryButton  style = {styles.button} title = "Login" onPress= { () => navigation.navigate("AboutScreen") } />
          
          
           <Pressable onPress={ ( ) => navigation.navigate("RegisterScreen")  } >

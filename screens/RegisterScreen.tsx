@@ -23,7 +23,7 @@ export default function RegisterScreen( {navigation} : Props ){
            
                     
                     
-                     <PrimaryButton  style = {styles.button} title = "Register" onPress= { () => navigation.navigate("AboutScreen") } />
+                     <PrimaryButton  style = {styles.button} title = "Register" onPress= { () => navigation.navigate("ProfileScreen") } />
                     
                     
                      <Pressable onPress = { () => navigation.navigate("LoginScreen") }>

@@ -1,14 +1,13 @@
 import { Text , View , TextInput, Button, StyleSheet} from 'react-native'
-
+import CustomModal from '../components/CaseModal'
 
 export default function AboutScreen(){
    return(
-      <View>
+      
          
-         <Text style = {styles.text}>  This is ABOUT US screen!  </Text>
+         <CustomModal/>
 
-      </View>
-
+      
    )
 }
 
