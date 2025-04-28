@@ -39,7 +39,7 @@ export default function LoginScreen({navigation} : Props){
               <Text style = {styles.textual}>Show Password</Text>
              
          
-          <PrimaryButton  style = {styles.button} title = "Login" onPress= { () => navigation.navigate("AboutScreen") } />
+          <PrimaryButton  style = {styles.button} title = "Login" onPress= { () => navigation.navigate("MainScreen") } />
          
          
           <Pressable onPress={ ( ) => navigation.navigate("RegisterScreen")  } >

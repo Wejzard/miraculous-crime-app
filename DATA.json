@@ -1,0 +1,34 @@
+[
+    
+    {
+   
+    "id" : "1",
+    "image" : "flowerOne.png",
+     "title" : "First case"
+},
+{
+   
+    "id" : "2",
+    "image" : "orangeOne.png",
+     "title" : "Second case"
+},
+{
+   
+    "id" : "3",
+    "image" : "blueOne.png",
+     "title" : "Third case"
+},
+{
+   
+    "id" : "4",
+    "image" : "pikachu.png",
+     "title" : "Fourth case"
+}
+
+
+
+
+
+
+
+]
